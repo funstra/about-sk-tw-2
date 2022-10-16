@@ -6,14 +6,18 @@
 
 	let routing = false;
 	let done = false;
-	beforeNavigate(() => {
-		routing = true;
-		done = false;
+	beforeNavigate(({ from }) => {
+		if (from !== null) {
+			routing = true;
+			done = false;
+		}
 	});
-	afterNavigate(() => {
-		routing = false;
-		done = true;
-		$destIndex = -1;
+	afterNavigate(({ from }) => {
+		if (from !== null) {
+			routing = false;
+			done = true;
+			$destIndex = -1;
+		}
 	});
 </script>
 
