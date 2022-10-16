@@ -34,7 +34,7 @@
 			duration,
 			easing,
 			css: (t: number, u: number) => `
-			transform: ${transform} translate(calc(var(--x,1)*${(1 - t) * x}px), calc(var(--y,1)*${
+			transform: ${transform} translate(calc(var(--x_,1)*${(1 - t) * x}px), calc(var(--y_,1)*${
 				(1 - t) * x
 			}px));
 			opacity: ${target_opacity - od * u}`
@@ -73,8 +73,8 @@
 
 <style>
 	div {
-		--x: 0;
-		--y: 1;
+		--x_: 0;
+		--y_: 1;
 		overflow-x: hidden;
 		overflow-y: scroll;
 		height: 100%;
@@ -85,8 +85,8 @@
 	}
 	@media (min-width: 640px) {
 		div {
-			--x: 1;
-			--y: 0;
+			--x_: 1;
+			--y_: 0;
 		}
 	}
 	div > :global(*) {

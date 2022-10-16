@@ -34,7 +34,7 @@
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke-width="1.5"
-							class="inline w-[1em] stroke-ternary fill-ternary -translate-y-[2px]"
+							class="inline w-[1em] -translate-y-[2px] fill-ternary stroke-ternary"
 						>
 							<path
 								stroke-linecap="round"
@@ -73,14 +73,12 @@
 	span,
 	strong,
 	hr {
-		/* margin-inline-end: 1ch; */
 		animation-name: enter;
 		display: inline-block;
 		animation-duration: 400ms;
 		animation-fill-mode: both;
-		animation-delay: calc(200ms + 90ms * var(--i) + var(--offset, 0ms));
+		animation-delay: calc(400ms + 90ms * var(--i) + var(--offset, 0ms));
 		animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1.5);
-		/* animation-timing-function: cubic-bezier(1, 0.22, 0, 1.42); */
 	}
 	span,
 	strong {
@@ -88,29 +86,21 @@
 	}
 	hr {
 		--x: -100%;
-		/* --offset: 750ms; */
 	}
 	.overflow {
 		margin-inline-end: 1ch;
-		/* padding-top: 4px; */
 		display: inline-block;
-		/* white-space: pre-line; */
 		line-height: 1;
 		overflow: hidden;
-		/* outline: 1px currentColor dashed; */
 		border: 1px currentColor dashed;
 		padding: 2px;
 	}
 	hr {
 		display: block;
 		width: var(--space-3xl);
-		/* margin-inline: auto; */
-		/* border-color: hsl(var(--col-prim)); */
 		border-style: none;
 		height: var(--space-s);
 		background-color: hsl(var(--col-primary));
-		/* border-width: var(--space-2xs); */
-		/* margin-block: var(--space-3xs); */
 	}
 
 	svg {

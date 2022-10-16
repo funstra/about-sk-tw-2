@@ -54,7 +54,7 @@
 
 	ul a > div {
 		@apply scale-y-0;
-		transition-duration: 500ms;
+		transition-duration: 300ms;
 	}
 
 	a.current > div {
